@@ -59,11 +59,11 @@ public class Account {
     }
 
     private void validateWithdraw(double amount) {
-        if(amount > getWithdrawLimit()) {
-            throw new RuntimeException("Error de saque: A quantia excede o limite de saque");
+        if (amount > getWithdrawLimit()) {
+            throw new RuntimeException("Withdrawal error: amount exceeds per-transaction limit");
         }
         if (amount > getBalance()) {
-            throw new RuntimeException("Erro de saque: Saldo insuficiente");
+            throw new RuntimeException("Withdrawal error: insufficient balance");
         }
     }
 }
